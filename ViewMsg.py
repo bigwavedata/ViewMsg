@@ -8,11 +8,12 @@ import OleFileIO_PL as converter
 import sys
 import Tkinter, tkFileDialog
 from ExtractMsg import Message
+import easygui as GUI
 
 
 
 def checkFile(name):    
-    assert converter.isOleFile("file1.msg")
+    assert converter.isOleFile("Example Message Subject.msg")
 
 def doConversion(name):
     checkFile(name)
@@ -43,4 +44,10 @@ if __name__ == '__main__':
     
     # fileLocation is set by this point
     message = Message(fileLocation)
-        
+    
+    print "the subject:"
+    print "Value", message.subject
+    print "Header",message.header
+    print "the message:"
+    print message.body
+    GUI.textbox(message.subject, "", message.body, 0)

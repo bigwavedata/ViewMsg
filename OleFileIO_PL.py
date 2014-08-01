@@ -282,7 +282,7 @@ KEEP_UNICODE_NAMES = False
 
 #[PL] DEBUG display mode: False by default, use set_debug_mode() or "-d" on
 # command line to change it.
-DEBUG_MODE = True
+DEBUG_MODE = False
 def debug_print(msg):
     print(msg)
 def debug_pass(msg):
